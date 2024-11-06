@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura do App</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- Tela de Splash -->
+    <div id="splash">
+        <img src="./assets/logo.png" alt="Logo da Empresa">
+    </div>
+
+<!-- Tela de Login -->
+<div id="login-screen">
+    <img src="./assets/logo.png" alt="Logo da Empresa Pequeno">
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button type="button" class="btn-primary" onclick="login()">Acessar</button>
+        <button type="button" class="btn-secondary">Contratar</button>
+    </form>
+</div>
+
+<!-- Modal para mensagem de erro -->
+<div id="modal-error" class="modal">
+    <div class="modal-content" id="error-message">Usuário sem conta!</div>
+</div>
+
+    <!-- Link para o JavaScript externo -->
+    <script src="./assets/script.js"></script>
+</body>
+</html>
