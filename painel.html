@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do App Bancário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="app-header">
+        <div class="header-content">
+            <img src="./assets/logo.png" alt="Logo da Empresa" class="header-logo">
+            <h1>Bem-vindo, Dev</h1>
+            <button class="btn-sair" onclick="logout()">Sair</button>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <section class="balance-section">
+            <h2>Saldo disponível</h2>
+            <p class="balance-amount">R$ 3.250,00</p>
+        </section>
+
+        <section class="actions-section">
+            <button class="btn-action">
+                <i class="fas fa-university"></i> Depósito
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-money-bill-wave"></i> Transferir
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-credit-card"></i> Cartão
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-receipt"></i> Extrato
+            </button>
+        </section>
+    </main>
+
+    <!-- Link para o JavaScript -->
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

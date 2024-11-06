@@ -106,3 +106,89 @@ input[type="text"], input[type="password"] {
     max-width: 250px;
     width: 80%;
 }
+
+/* PAINEL  */
+
+/* Cabeçalho */
+.app-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.btn-sair {
+    background-color: #005bb5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Conteúdo principal */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.balance-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: #333;
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Seção de Ações */
+.actions-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-action {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    width: 120px;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.btn-action i {
+    font-size: 20px;
+}
+
+.btn-action:hover {
+    background-color: #005bb5;
+}
