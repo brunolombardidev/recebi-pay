@@ -41,3 +41,11 @@ document.getElementById('modal-error').addEventListener('click', function(event)
         this.style.display = 'none';
     }
 });
+
+function openMenu() {
+    document.getElementById('side-menu').style.width = '110vw';
+}
+
+function closeMenu() {
+    document.getElementById('side-menu').style.width = '0';
+}

@@ -1,4 +1,12 @@
-/* Configurações básicas */
+:root {
+    --color-white1: #ffffff;
+    --color-grey1: #cccccc;
+    --color-black1: #000000;
+    --color-blue1: #007bff;
+    --color-blue2: #005fc5;
+    --color-red1: #9e0202;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +17,12 @@
 body, html {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #007bff; /* Fundo azul */
+    flex-direction: column;
+    background-color: var(--color-blue1);
 }
 
-/* Splash e tela de login */
+/* /// SPLASH E LOGIN /// */
+
 #splash, #login-screen {
     position: absolute;
     width: 100%;
@@ -28,17 +36,18 @@ body, html {
 }
 
 #splash img {
-    width: 250px;
+    width: 280px;
 }
 
 #login-screen img {
-    width: 150px;
+    margin-bottom: 20px;
+    width: 200px;
 }
 
 #login-screen {
     display: none;
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--color-blue1);
+    color: var(--color-white1);
 }
 
 form {
@@ -68,17 +77,19 @@ input[type="text"], input[type="password"] {
 }
 
 .btn-primary {
-    background-color: #28a745;
-    color: #fff;
+    margin-top: 20px;
+    background-color: var(--color-white1);
+    color: var(--color-blue1);
     font-weight: bold;
 }
 
 .btn-secondary {
-    background-color: #0062ca;
-    color: #65aefc;
+    background-color: var(--color-blue2);
+    color: var(--color-blue1);
 }
 
-/* Modal e fundo escuro */
+/* /// MODAL MENSAGEM /// */
+
 .modal {
 
     position: fixed;
@@ -97,8 +108,8 @@ input[type="text"], input[type="password"] {
 }
 
 .modal-content {
-    background-color: #9e0202;
-    color: white;
+    background-color: var(--color-red1);
+    color: var(--color-white1);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
@@ -107,88 +118,207 @@ input[type="text"], input[type="password"] {
     width: 80%;
 }
 
-/* PAINEL  */
+/* /// PAINEL /// */
 
-/* Cabeçalho */
-.app-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+.blocoTopo {
+    margin: 0;
+    padding: 10px 20px;
+    width: 100vw;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    text-align: center;
-}
-
-.header-content {
-    display: flex;
+    vertical-align: middle;
     align-items: center;
-    gap: 15px;
 }
 
-.header-logo {
-    width: 40px;
-    height: 40px;
+.caixaLogo {
+    margin: 0;
 }
 
-.btn-sair {
-    background-color: #005bb5;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+.logoHorizon {
+    margin: 0;
+    width: 150px;
+}
+
+.caixaMenu {
+    margin: 0;
+}
+
+.blocoCorpo {
+    margin: 0;
+    padding: 10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixaSaldo {
+    margin: 0;
+    padding: 20px;
+    min-height: 100px;
+    background-color: var(--color-white1);
+    border: 0;
+    border-radius: 15px;
+}
+
+.balance-link {
+    color: var(--color-blue1);
     font-size: 14px;
-    cursor: pointer;
+    text-decoration: none;
 }
 
-/* Conteúdo principal */
-.main-content {
-    padding: 20px;
-    text-align: center;
+.balance-link:hover {
+    text-decoration: underline;
 }
 
-.balance-section {
-    background-color: #f7f7f7;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    color: #333;
-}
-
-.balance-amount {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Seção de Ações */
-.actions-section {
+.caixaServicos {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.btn-action {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    width: 120px;
-    justify-content: center;
-    transition: background-color 0.3s;
-}
-
-.btn-action i {
-    font-size: 20px;
+    flex-direction: row;
 }
 
 .btn-action:hover {
-    background-color: #005bb5;
+    background-color: var(--color-grey1);
+    transition: background-color 0.5s;
+}
+
+.btn-action {
+    margin: 8px 4px;
+    padding: 12px;
+    width: 100vw;
+    color: var(--color-blue1);
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-option {
+    margin-bottom: 4px;
+    padding: 12px;
+    background-color: var(--color-blue1);
+    border: none;
+    font-size: 11px;
+    color: var(--color-white1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#bolinha {
+    margin: 5px 0;
+    padding-top: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-white1);
+    color: var(--color-blue1);
+    border-radius: 50%;
+}
+
+.caixaCartoes {
+    margin: 5px 0;
+    padding: 10px;
+    border-top: 1px var(--color-blue2) solid;
+}
+
+h3 {
+    color: var(--color-white1);
+}
+
+.textoGr {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 2.0;
+}
+
+.textoMd {
+    font-size: 20px;
+    font-weight:600;
+}
+
+.textoPq {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* /// MODAL MENU /// */
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: var(--color-white1);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: -40px;
+    background-color: var(--color-blue1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.side-menu a {
+    color: var(--color-white1);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+    font-size: 30px;
+    color: var(--color-white1);
+    background: none;
+    border: none;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+/* Responsividade para telas de celular */
+@media (max-width: 480px) {
+    /* Reduz o tamanho do cabeçalho e dos ícones */
+    .app-header {
+        padding: 10px 15px;
+    }
+
+    .header-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajusta a largura do saldo e dos botões */
+    .balance-section {
+        width: 90%;
+    }
+
+    .actions-section {
+        gap: 8px;
+    }
+
+    .btn-action {
+        width: 80px;
+        font-size: 12px;
+    }
+
+    /* Ajusta tamanho das seções adicionais */
+    .other-section {
+        width: 90%;
+        padding: 10px;
+    }
 }
