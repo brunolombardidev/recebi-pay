@@ -1,6 +1,7 @@
 :root {
     --color-white1: #ffffff;
     --color-grey1: #cccccc;
+    --color-grey2: #f0f0f0;
     --color-black1: #000000;
     --color-blue1: #007bff;
     --color-blue2: #005fc5;
@@ -91,7 +92,6 @@ input[type="text"], input[type="password"] {
 /* /// MODAL MENSAGEM /// */
 
 .modal {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -146,17 +146,16 @@ input[type="text"], input[type="password"] {
 
 .blocoCorpo {
     margin: 0;
-    padding: 10px;
     width: 100vw;
     display: flex;
     flex-direction: column;
 }
 
 .caixaSaldo {
-    margin: 0;
+    margin: 10px;
     padding: 20px;
     min-height: 100px;
-    background-color: var(--color-white1);
+    background-color: var(--color-grey2);
     border: 0;
     border-radius: 15px;
 }
@@ -171,9 +170,15 @@ input[type="text"], input[type="password"] {
     text-decoration: underline;
 }
 
-.caixaServicos {
+.caixas {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.emLinha {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .btn-action:hover {
@@ -185,7 +190,7 @@ input[type="text"], input[type="password"] {
     margin: 8px 4px;
     padding: 12px;
     width: 100vw;
-    color: var(--color-blue1);
+    color: var(--color-blue2);
     border: none;
     border-radius: 10px;
     font-size: 14px;
@@ -197,7 +202,7 @@ input[type="text"], input[type="password"] {
 
 .btn-option {
     margin-bottom: 4px;
-    padding: 12px;
+    padding: 10px;
     background-color: var(--color-blue1);
     border: none;
     font-size: 11px;
@@ -218,10 +223,10 @@ input[type="text"], input[type="password"] {
     border-radius: 50%;
 }
 
-.caixaCartoes {
-    margin: 5px 0;
-    padding: 10px;
-    border-top: 1px var(--color-blue2) solid;
+hr {
+    margin: 20px 10px 10px 10px;
+    width: 95%;
+    border: 1px var(--color-blue2) solid;
 }
 
 h3 {
@@ -237,11 +242,13 @@ h3 {
 .textoMd {
     font-size: 20px;
     font-weight:600;
+
 }
 
 .textoPq {
     font-size: 14px;
     font-weight: 300;
+    color: #003772;
 }
 
 /* /// MODAL MENU /// */
