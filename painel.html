@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebi Bank</title>
+    <!-- Bootstrap e Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+    <div class="blocoTopo">
+
+        <div class="caixaLogo">
+            <img class="logoHorizon" src="./assets/logoHorizon.png">
+        </div>
+        <div class="caixaMenu">
+            <button class="menu-toggle" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Menu lateral que desliza -->
+    <div id="side-menu" class="side-menu">
+        <button class="close-btn" onclick="closeMenu()">&times;</button>
+        <!-- Links do menu lateral (personalize conforme necessário) -->
+        <a href="#">Perfil</a>
+        <a href="#">Configurações</a>
+        <a href="#">Suporte</a>
+        <a href="index.html">Logout</a>
+    </div>
+
+    <div class="blocoCorpo">
+
+        <div class="caixaSaldo">
+            <h4>Saldo disponível</h4>
+            <span class="textoGr">R$ 1.356,00</span><p>
+            <a href="#" class="balance-link">
+                <i class="fas fa-receipt"></i>
+                Extrato da Conta</a>
+        </div>
+        <div class="caixas">
+            <h3>Área Pix</h3>
+            <div class="emLinha">
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-key"></i> Chaves
+                </button>
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-paper-plane"></i></i> Enviar
+                </button>
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-calendar-alt"></i> Programar
+                </button>
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-qrcode"></i> Ler QR
+                </button>
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-clipboard"></i> Copia-cola
+                </button>
+                <button class="btn-option">
+                    <i id="bolinha" class="fas fa-hand-holding-usd"></i> Cobrar
+                </button>
+            </div>
+        </div>
+        <div class="caixaSaldo">
+            <h4>Cartões de Crédito</h3><br>
+            <span class="textoMd">R$ 356,00</span><p>
+            <span class="textoPq">Limíte disponível: <strong>R$ 356,00</strong></span>
+        </div>
+        <div class="caixaSaldo">
+            <h4>Recarga de Celular</h3><br>
+            <span class="textoMd">R$ 45,00</span><p>
+            <span class="textoPq">Última recarga: <strong>(12) 99999-9999</strong></span>
+        </div>
+        <div class="caixas emLinha">
+            <button class="btn-action">
+                <i class="fas fa-exchange-alt"></i> Transferir
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-barcode"></i> Pagar
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-piggy-bank"></i> Investir
+            </button>
+            <button class="btn-action">
+                <i class="fas fa-hand-holding-usd"></i> Emprestar
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Link para o JavaScript externo -->
+    <script src="./assets/script.js"></script>
+</body>
+</html>
