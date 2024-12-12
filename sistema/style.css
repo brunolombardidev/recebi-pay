@@ -1,0 +1,241 @@
+/* -------------------------------------------
+   Estilos Globais
+-------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* -------------------------------------------
+   Estilos do Header
+-------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Cor azul do cabeçalho */
+  color: white;
+}
+
+header .perfil {
+  display: flex;
+  align-items: center;
+}
+
+header .perfil .avatar {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+header .icons i {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* -------------------------------------------
+   Estilos do Main (Conteúdo Principal)
+-------------------------------------------- */
+main {
+  padding: 0;
+  padding-bottom: 70px; /* Espaço reservado para o rodapé fixo */
+}
+
+/* Estilos das Divs de Saldo e Vendas a Receber */
+.saldos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.saldos div {
+  flex: 1;
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Menu Principal */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0 10px;
+  margin: 10px 0 30px 0;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.menu-item i {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.menu-item p {
+  font-size: 14px;
+}
+
+/* -------------------------------------------
+   Estilos do Footer
+-------------------------------------------- */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-item {
+  text-align: center;
+  color: gray;
+}
+
+.footer-item.active {
+  color: #007BFF;
+}
+
+.footer-item i {
+  font-size: 20px;
+}
+
+.footer-item p {
+  font-size: 12px;
+}
+
+/* -------------------------------------------
+   Estilos da Splash Page
+-------------------------------------------- */
+body.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #007BFF; /* Fundo azul consistente */
+  color: white;
+}
+
+.splash-container {
+  text-align: center;
+}
+
+.splash-logo {
+  margin-bottom: 20px;
+}
+
+.splash-title h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* -------------------------------------------
+   Estilos Responsivos
+-------------------------------------------- */
+
+/* Dispositivos menores */
+@media (max-width: 768px) {
+  .saldos {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .saldos div {
+    margin: 0;
+    border-radius: 0;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .saldos div:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .saldos div + div {
+    margin-top: 0px;
+  }
+
+  .saldos div:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* Ajustes para Desktop */
+@media (min-width: 769px) {
+  .saldos {
+    margin: 20px 10px; /* Espaçamento no topo e nas laterais */
+  }
+
+  .saldos div {
+    margin: 0 5px; /* Espaçamento entre as divs */
+    border-radius: 5px; /* Cantos arredondados na versão desktop */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .saldos div:first-child {
+    margin-left: 0;
+  }
+
+  .saldos div:last-child {
+    margin-right: 0;
+  }
+}
+
+/* -------------------------------------------
+   Estilos da Splash Page
+-------------------------------------------- */
+body.splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #007BFF; /* Fundo azul consistente */
+  color: white;
+}
+
+.splash-container {
+  text-align: center;
+}
+
+.splash-logo img {
+  width: 200px; /* Tamanho inicial do logotipo */
+  animation: zoom-effect 3s ease-in-out infinite; /* Animação de zoom suave */
+}
+
+/* Animação do Zoom */
+@keyframes zoom-effect {
+  0% {
+    transform: scale(1); /* Tamanho inicial */
+  }
+  50% {
+    transform: scale(1.05); /* Aumenta 5% */
+  }
+  100% {
+    transform: scale(1); /* Retorna ao tamanho original */
+  }
+}
