@@ -1,0 +1,253 @@
+/* -------------------------------------------
+   Variáveis Globais
+-------------------------------------------- */
+:root {
+    --color-white1: #ffffff;
+    --color-grey1: #cccccc;
+    --color-grey2: #f0f0f0;
+    --color-black1: #000000;
+    --color-blue1: #007bff;
+    --color-blue2: #005fc5;
+    --color-red1: #9e0202;
+}
+
+/* -------------------------------------------
+   Estilos Globais
+-------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+}
+
+/* -------------------------------------------
+   Estilos de Tela de Splash e Login
+-------------------------------------------- */
+#splash, #login-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+	background-color: var(--color-blue1);
+}
+
+#splash img {
+    width: 280px;
+}
+
+#login-screen img {
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+#login-screen {
+    display: none;
+    background-color: var(--color-blue1);
+    color: var(--color-white1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    background-color: var(--color-white1);
+    color: var(--color-blue1);
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: var(--color-blue2);
+    color: var(--color-blue1);
+}
+
+/* -------------------------------------------
+   Estilos do Modal
+-------------------------------------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-error {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--color-red1);
+    color: var(--color-white1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    max-width: 250px;
+    width: 80%;
+}
+
+/* -------------------------------------------
+   Estilos do Header (Painel)
+-------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--color-blue1);
+    color: white;
+}
+
+header .perfil {
+    display: flex;
+    align-items: center;
+}
+
+header .perfil .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header .icons i {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* -------------------------------------------
+   Estilos do Main (Painel)
+-------------------------------------------- */
+main {
+    padding: 0;
+    padding-bottom: 70px;
+}
+
+.saldos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.saldos div {
+    flex: 1;
+    background-color: var(--color-blue1);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 10px;
+    margin: 10px 0 30px 0;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item i {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.menu-item p {
+    font-size: 14px;
+}
+
+/* -------------------------------------------
+   Estilos do Footer
+-------------------------------------------- */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-item {
+    text-align: center;
+    color: gray;
+}
+
+.footer-item.active {
+    color: var(--color-blue1);
+}
+
+.footer-item i {
+    font-size: 20px;
+}
+
+.footer-item p {
+    font-size: 12px;
+}
+
+/* -------------------------------------------
+   Responsividade
+-------------------------------------------- */
+@media (max-width: 480px) {
+    .saldos {
+        flex-direction: column;
+    }
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
